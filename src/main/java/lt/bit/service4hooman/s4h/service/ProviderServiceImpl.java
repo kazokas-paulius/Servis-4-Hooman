@@ -3,6 +3,8 @@ package lt.bit.service4hooman.s4h.service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
@@ -11,6 +13,7 @@ import lt.bit.service4hooman.s4h.repository.ProviderRepository;
 
 @Service
 @Validated
+@Transactional
 public class ProviderServiceImpl {
 
 	private ProviderRepository repository;
@@ -24,6 +27,7 @@ public class ProviderServiceImpl {
 		return repository.findAll().stream().collect(Collectors.toList());
 	}
 
+//	@Transactional(readonly = true)
 	public Provider getProviderById(Integer id) {
 		return repository.getOne(id);
 	}

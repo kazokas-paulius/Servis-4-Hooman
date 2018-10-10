@@ -1,2 +1,2 @@
-INSERT INTO test.products (id, name, price)
-VALUES(UUID(), "from migration", 10);
+INSERT INTO s4h.providers (id, name, price)
+VALUES("antras", "from migration", 10);

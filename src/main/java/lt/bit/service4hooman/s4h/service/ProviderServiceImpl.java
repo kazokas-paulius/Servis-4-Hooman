@@ -1,50 +1,52 @@
 package lt.bit.service4hooman.s4h.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
+
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 
 import lt.bit.service4hooman.s4h.entity.Provider;
 import lt.bit.service4hooman.s4h.repository.ProviderRepository;
-import lt.bit.service4hooman.s4h.service.ProviderService;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @Validated
+@Transactional
 public class ProviderServiceImpl {
 
-    private ProviderRepository repository;
+	private ProviderRepository repository;
 
 ///    @Autowired
-    public void setProductRepository(ProviderRepository repository) {
-        this.repository = repository;
-    }
-
-	public List<Provider> getProducts() {
-		return repository.findAll().stream()
-				.collect(Collectors.toList());
+	public void setProductRepository(ProviderRepository repository) {
+		this.repository = repository;
 	}
-	
+
+	public List<Provider> getProviders() {
+		return repository.findAll().stream().collect(Collectors.toList());
+	}
+
+	@Transactional(readOnly = true)
 	public Provider getProviderById(Integer id) {
-		return repository.getOne (id);
+		return repository.getOne(id);
 	}
 
 	public void saveProvider(Provider provider) {
-		  repository.save(provider);
+		repository.save(provider);
 	}
 
-	   public void updateProvider(Integer id, Provider provider) {
+	public void updateProvider(Integer id, Provider provider) {
 //		  Note updated = repository.getOne(id);
 //	        updated.setDone(done);
 //	        updated.setMessage(message);
 //	        repository.save(updated);
-		
+
 	}
 
 	public void deleteProvider(Integer id) {
-		   repository.deleteById(id);
+		repository.deleteById(id);
 	}
 
 	public List<Provider> findAllFree() {

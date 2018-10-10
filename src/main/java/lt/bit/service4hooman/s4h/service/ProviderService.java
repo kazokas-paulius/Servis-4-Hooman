@@ -9,5 +9,6 @@ public interface ProviderService {
     void saveProvider(Provider provider);
     void updateProvider(Integer id, Provider provider);
     void deleteProvider(Integer id);
+    List<Provider> getProviders();
     List<Provider> findAllFree();
 }

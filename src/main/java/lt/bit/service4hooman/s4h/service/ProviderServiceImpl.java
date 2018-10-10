@@ -9,6 +9,7 @@ import lt.bit.service4hooman.s4h.repository.ProviderRepository;
 import lt.bit.service4hooman.s4h.service.ProviderService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Validated
@@ -21,6 +22,11 @@ public class ProviderServiceImpl {
         this.repository = repository;
     }
 
+	public List<Provider> getProducts() {
+		return repository.findAll().stream()
+				.collect(Collectors.toList());
+	}
+	
 	public Provider getProviderById(Integer id) {
 		return repository.getOne (id);
 	}

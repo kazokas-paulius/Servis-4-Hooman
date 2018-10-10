@@ -1,10 +1,12 @@
-package lt.bit.service4hooman.s4h.provider;
+package lt.bit.service4hooman.s4h.entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
@@ -19,6 +21,7 @@ public class Provider implements Serializable {
 
 	@Id
 	@NotNull
+	@GeneratedValue
 	@Column(name = "id")
 	private int id;
 
@@ -40,5 +43,77 @@ public class Provider implements Serializable {
 
 	@Column(name = "rating")
 	private byte rating;
+
+	
+	
+	public Provider(@NotNull int id, @NotBlank @Size(min = 4, max = 100) String name,
+			@Size(min = 4, max = 20) String passw, @Size(min = 7, max = 12) String phone, int work) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.passw = passw;
+		this.phone = phone;
+		this.work = work;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassw() {
+		return passw;
+	}
+
+	public void setPassw(String passw) {
+		this.passw = passw;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public int getWork() {
+		return work;
+	}
+
+	public void setWork(int work) {
+		this.work = work;
+	}
+
+	public LocalDate getFree() {
+		return free;
+	}
+
+	public void setFree(LocalDate free) {
+		this.free = free;
+	}
+
+	public byte getRating() {
+		return rating;
+	}
+
+	public void setRating(byte rating) {
+		this.rating = rating;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 }

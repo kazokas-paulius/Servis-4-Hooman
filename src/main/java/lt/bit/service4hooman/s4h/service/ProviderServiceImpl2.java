@@ -49,4 +49,10 @@ public class ProviderServiceImpl2 implements ProviderService{
 	public List<Provider> findAllFree() {
 		return repository.findAll();// findAllFree();
 	}
+
+	@Override
+	public List<Provider> getProviders() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

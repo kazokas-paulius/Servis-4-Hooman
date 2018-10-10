@@ -27,7 +27,7 @@ public class Provider implements Serializable {
 
 	@Column(name = "name", nullable = false)
 	@NotBlank // " ", " ", "\n", null
-	@Size(min = 4, max = 100)
+	@Size(min = 4, max = 25)
 	private String name;
 	
 	@Column(name = "passw", nullable = false)

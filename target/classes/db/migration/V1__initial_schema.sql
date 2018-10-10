@@ -1,6 +1,10 @@
 CREATE TABLE IF NOT EXISTS s4h.providers
-(id VARCHAR(36),
-`name` VARCHAR(100) NOT NULL,
-price FLOAT DEFAULT 0,
-supplier_id VARCHAR(36),
+(id int NOT NULL AUTO_INCREMENT,
+name VARCHAR(25) NOT NULL,
+passw VARCHAR(20) not null,
+phone varchar(12),
+work int,
+free DATETIME,
+rating tinyint,
 PRIMARY KEY (id));
+

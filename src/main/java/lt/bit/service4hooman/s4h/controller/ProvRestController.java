@@ -18,16 +18,17 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import lt.bit.service4hooman.s4h.entity.Provider;
-import lt.bit.service4hooman.s4h.service.ProviderService;
+import lt.bit.service4hooman.s4h.service.ProvService;
 
 @RestController
 @RequestMapping("/providers")
-public class ProviderRestController {
+public class ProvRestController {
 
-	private ProviderService service;
+	private ProvService service;
 
 	// Autowired
-	public ProviderRestController(ProviderService service) {
+	public ProvRestController(ProvService service) {
+//	public void setProvService(ProvService service) {
 		this.service = service;
 	}
 

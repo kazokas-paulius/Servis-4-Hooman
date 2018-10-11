@@ -44,7 +44,9 @@ public class Provider implements Serializable {
 	@Column(name = "rating")
 	private byte rating;
 
-	
+	public Provider() {
+		
+	}
 	
 	public Provider(@NotNull int id, @NotBlank @Size(min = 4, max = 100) String name,
 			@Size(min = 4, max = 20) String passw, @Size(min = 7, max = 12) String phone, int work) {

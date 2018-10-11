@@ -5,19 +5,22 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
 import lt.bit.service4hooman.s4h.entity.Provider;
-import lt.bit.service4hooman.s4h.repository.ProviderRepository;
-import lt.bit.service4hooman.s4h.service.ProviderService;
+import lt.bit.service4hooman.s4h.repository.ProvRepository;
+import lt.bit.service4hooman.s4h.service.ProvService;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Validated
-public class ProviderServiceImpl2 implements ProviderService{
+public class ProvServiceImpl implements ProvService{
 
-    private ProviderRepository repository;
+    private ProvRepository repository;
 
 ///    @Autowired
-    public void setProductRepository(ProviderRepository repository) {
+//    public void setProductRepository(ProvRepository repository) {
+    public ProvServiceImpl(ProvRepository repository) {
         this.repository = repository;
     }
 
@@ -48,5 +51,13 @@ public class ProviderServiceImpl2 implements ProviderService{
 	@Override
 	public List<Provider> findAllFree() {
 		return repository.findAll();// findAllFree();
+	}
+
+	@Override
+	public List<Provider> getProviders() {
+//		return new ArrayList<Provider>();
+//				repository.findAll().stream().collect(Collectors.toList());
+		return repository.findAll();
+//		return null;
 	}
 }

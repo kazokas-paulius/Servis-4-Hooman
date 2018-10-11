@@ -14,38 +14,39 @@ import java.util.stream.Collectors;
 
 @Service
 @Validated
-public class ProvServiceImpl implements ProvService{
+public class ProvServiceImpl implements ProvService {
 
-    private ProvRepository repository;
+	private ProvRepository repository;
 
 ///    @Autowired
 //    public void setProductRepository(ProvRepository repository) {
-    public ProvServiceImpl(ProvRepository repository) {
-        this.repository = repository;
-    }
+	public ProvServiceImpl(ProvRepository repository) {
+		this.repository = repository;
+	}
 
 	@Override
 	public Provider getProviderById(Integer id) {
-		return repository.getOne (id);
+		return repository.getOne(id);
 	}
 
 	@Override
 	public void saveProvider(Provider provider) {
-		  repository.save(provider);
+		repository.save(provider);
 	}
 
 	@Override
-	   public void updateProvider(Integer id, Provider provider) {
-//		  Note updated = repository.getOne(id);
+	public void updateProvider(Integer id, Provider provider) {
+//		  Provider updated = repository.getOne(id);
 //	        updated.setDone(done);
 //	        updated.setMessage(message);
-//	        repository.save(updated);
-		
+		provider.setId(id);
+		repository.save(provider);
+
 	}
 
 	@Override
 	public void deleteProvider(Integer id) {
-		   repository.deleteById(id);
+		repository.deleteById(id);
 	}
 
 	@Override

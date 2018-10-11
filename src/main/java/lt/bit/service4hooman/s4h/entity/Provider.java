@@ -17,7 +17,7 @@ import javax.validation.constraints.Size;
 @Table(name = "providers")
 public class Provider implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+//	private static final long serialVersionUID = 1L;
 
 	@Id
 	@NotNull
@@ -113,8 +113,8 @@ public class Provider implements Serializable {
 		this.rating = rating;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+//	public static long getSerialversionuid() {
+//		return serialVersionUID;
+//	}
 
 }

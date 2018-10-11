@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import lt.bit.service4hooman.s4h.entity.Provider;
 
-@Repository
-public interface ProviderRepository extends JpaRepository<Provider, Integer> {
+//@Repository
+public interface ProvRepository extends JpaRepository<Provider, Integer> {
 
 	List<Provider> findAll(); //WhereFreeIsNotNull(); //Free();
 	List<Provider> findByName(String name); 

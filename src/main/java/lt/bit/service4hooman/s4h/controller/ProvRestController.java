@@ -18,16 +18,17 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import lt.bit.service4hooman.s4h.entity.Provider;
-import lt.bit.service4hooman.s4h.service.ProviderService;
+import lt.bit.service4hooman.s4h.service.ProvService;
 
 @RestController
 @RequestMapping("/providers")
-public class ProviderRestController {
+public class ProvRestController {
 
-	private ProviderService service;
+	private ProvService service;
 
 	// Autowired
-	public ProviderRestController(ProviderService service) {
+	public ProvRestController(ProvService service) {
+//	public void setProvService(ProvService service) {
 		this.service = service;
 	}
 
@@ -39,7 +40,7 @@ public class ProviderRestController {
 
 	@GetMapping("/{id}")
 	@ResponseBody
-	public ResponseEntity<Provider> getProductById(@PathVariable Integer id) {
+	public ResponseEntity<Provider> getProviderById(@PathVariable Integer id) {
 		return ResponseEntity.ok(service.getProviderById(id));
 	}
 
@@ -49,17 +50,17 @@ public class ProviderRestController {
 //		return service.saveProduct(product);
 //	}
 //
-//	@DeleteMapping("/{id}")
-//	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-//	public void deleteProductFromMap(@PathVariable String id) {
-//		service.deleteProduct(id);
-//	}
-//
-//	@PutMapping("/{id}")
-//	@ResponseStatus(value = HttpStatus.OK, reason = "Oro balionas")
-//	public void updateProduct(@PathVariable String id, @RequestBody Product product) {
-//		service.updateProduct(id, product);
-//	}
+	@DeleteMapping("/{id}")
+	@ResponseStatus(value = HttpStatus.NO_CONTENT)
+	public void deleteProvider(@PathVariable Integer id) {
+		service.deleteProvider(id);
+	}
+
+	@PutMapping("/{id}")
+	@ResponseStatus(value = HttpStatus.OK, reason = "Updated")
+	public void updateProvider(@PathVariable Integer id, @RequestBody Provider provider) {
+		service.updateProvider(id, provider);
+	}
 
 	@ResponseBody
 	public HttpStatus sendViaResponseEntity(String isStatus) {

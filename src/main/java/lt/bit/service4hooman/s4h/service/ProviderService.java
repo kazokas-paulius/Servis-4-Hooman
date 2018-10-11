@@ -10,7 +10,10 @@ public interface ProviderService {
     void updateProvider(Integer id, Provider provider);
     void deleteProvider(Integer id);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     List<Provider> getProviders();
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     List<Provider> findAllFree();

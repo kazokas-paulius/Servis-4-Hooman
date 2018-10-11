@@ -50,12 +50,15 @@ public class ProviderServiceImpl2 implements ProviderService{
 		return repository.findAll();// findAllFree();
 	}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 	@Override
 	public List<Provider> getProviders() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 }

@@ -4,6 +4,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 @Configuration
 public class ProjectConfiguration {
 

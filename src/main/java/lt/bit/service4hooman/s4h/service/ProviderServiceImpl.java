@@ -9,10 +9,11 @@ import lt.bit.service4hooman.s4h.repository.ProviderRepository;
 import lt.bit.service4hooman.s4h.service.ProviderService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Validated
-public class ProviderServiceImpl2 implements ProviderService{
+public class ProviderServiceImpl {
 
     private ProviderRepository repository;
 
@@ -21,17 +22,19 @@ public class ProviderServiceImpl2 implements ProviderService{
         this.repository = repository;
     }
 
-	@Override
+	public List<Provider> getProducts() {
+		return repository.findAll().stream()
+				.collect(Collectors.toList());
+	}
+	
 	public Provider getProviderById(Integer id) {
 		return repository.getOne (id);
 	}
 
-	@Override
 	public void saveProvider(Provider provider) {
 		  repository.save(provider);
 	}
 
-	@Override
 	   public void updateProvider(Integer id, Provider provider) {
 //		  Note updated = repository.getOne(id);
 //	        updated.setDone(done);
@@ -40,22 +43,11 @@ public class ProviderServiceImpl2 implements ProviderService{
 		
 	}
 
-	@Override
 	public void deleteProvider(Integer id) {
 		   repository.deleteById(id);
 	}
 
-	@Override
 	public List<Provider> findAllFree() {
 		return repository.findAll();// findAllFree();
 	}
-<<<<<<< Updated upstream
-
-	@Override
-	public List<Provider> getProviders() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-=======
->>>>>>> Stashed changes
 }

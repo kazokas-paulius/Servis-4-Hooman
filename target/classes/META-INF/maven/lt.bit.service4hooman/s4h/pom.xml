@@ -23,7 +23,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 	</properties>
 
 	<dependencies>
@@ -33,6 +36,14 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+=======
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
@@ -41,6 +52,7 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		
+>>>>>>> master
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -59,20 +71,14 @@
 		</dependency>
 
 
-<<<<<<< Updated upstream
-=======
 <<<<<<< HEAD
 =======
->>>>>>> Stashed changes
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
 			<version>2.2.0</version>
 		</dependency>
-<<<<<<< Updated upstream
-=======
 >>>>>>> master
->>>>>>> Stashed changes
 
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -80,11 +86,8 @@
 			<version>2.9.1</version>
 		</dependency>
 		<dependency>
-<<<<<<< Updated upstream
-=======
 <<<<<<< HEAD
 =======
->>>>>>> Stashed changes
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.1</version>
@@ -113,26 +116,22 @@
 		</dependency>
 
 		<dependency>
-<<<<<<< Updated upstream
-=======
 >>>>>>> master
->>>>>>> Stashed changes
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 			<version>5.1.4</version>
 		</dependency>
 
-<<<<<<< Updated upstream
-=======
 <<<<<<< HEAD
 
 
+	</dependencies>
+
 =======
->>>>>>> master
->>>>>>> Stashed changes
 	</dependencies>
 
 
+>>>>>>> master
 	<build>
 		<plugins>
 			<plugin>
@@ -144,6 +143,9 @@
 
 
 </project>
+<<<<<<< HEAD
+=======
 <!-- 
 		
 		 -->
+>>>>>>> master

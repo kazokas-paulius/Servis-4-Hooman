@@ -60,6 +60,11 @@
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 <<<<<<< HEAD
 =======
@@ -70,6 +75,10 @@
 			<version>2.2.0</version>
 		</dependency>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 =======
 >>>>>>> master
 >>>>>>> Stashed changes
@@ -81,6 +90,11 @@
 		</dependency>
 		<dependency>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 <<<<<<< HEAD
 =======
@@ -114,6 +128,10 @@
 
 		<dependency>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 =======
 >>>>>>> master
 >>>>>>> Stashed changes
@@ -123,12 +141,18 @@
 		</dependency>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> master
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	</dependencies>
 

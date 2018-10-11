@@ -18,7 +18,11 @@ import javax.validation.constraints.Size;
 public class Provider implements Serializable {
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 //	private static final long serialVersionUID = 1L;
+=======
+	private static final long serialVersionUID = 1L;
+>>>>>>> Stashed changes
 =======
 	private static final long serialVersionUID = 1L;
 >>>>>>> Stashed changes
@@ -32,7 +36,11 @@ public class Provider implements Serializable {
 	@Column(name = "name", nullable = false)
 	@NotBlank // " ", " ", "\n", null
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	@Size(min = 4, max = 25)
+=======
+	@Size(min = 4, max = 100)
+>>>>>>> Stashed changes
 =======
 	@Size(min = 4, max = 100)
 >>>>>>> Stashed changes
@@ -53,6 +61,7 @@ public class Provider implements Serializable {
 	private byte rating;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	public Provider() {
 		
 	}
@@ -60,11 +69,16 @@ public class Provider implements Serializable {
 	public Provider(@NotNull int id, @NotBlank @Size(min = 4, max = 100) String name,
 			@Size(min = 4, max = 20) String passw, @Size(min = 7, max = 12) String phone, int work) {
 =======
+=======
+>>>>>>> Stashed changes
 	
 	
 	public Provider(@NotNull int id, @NotBlank @Size(min = 4, max = 100) String name,
 			@Size(min = 4, max = 20) String passw, @Size(min = 7, max = 12) String phone, int work) {
 		super();
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		this.id = id;
 		this.name = name;
@@ -130,9 +144,15 @@ public class Provider implements Serializable {
 	}
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 //	public static long getSerialversionuid() {
 //		return serialVersionUID;
 //	}
+=======
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+>>>>>>> Stashed changes
 =======
 	public static long getSerialversionuid() {
 		return serialVersionUID;

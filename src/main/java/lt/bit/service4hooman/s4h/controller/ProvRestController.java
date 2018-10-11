@@ -1,5 +1,6 @@
 package lt.bit.service4hooman.s4h.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
@@ -24,6 +25,7 @@ import lt.bit.service4hooman.s4h.service.ProvService;
 @RequestMapping("/providers")
 public class ProvRestController {
 
+	private String viewType = "free";
 	private ProvService service;
 
 	// Autowired
@@ -35,7 +37,9 @@ public class ProvRestController {
 	@GetMapping
 	@ResponseBody
 	public ResponseEntity<List<Provider>> getProductResponseEntity() {
-		return ResponseEntity.ok(service.getProviders());
+		return ResponseEntity.ok(service
+				.findByFreeBeforeOrderByFree(LocalDate.now())); //findByFreeOrderByFree()); 
+//				.getProviders(viewType));
 	}
 
 	@GetMapping("/{id}")
